@@ -1,0 +1,103 @@
+body{
+    margin:0;
+    padding: 0;
+    overflow-x: hidden;
+    list-style: none;
+    box-sizing: border-box;
+    background: #000;
+    font-family: "Roboto";
+}
+
+nav{
+    position: fixed;
+    width:96%;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    z-index:100;
+}
+.logo{
+    font-size: 20px;
+    font-weight: 600px;
+    color: white;
+    font-family: 'AlphaCentauri', sans-serif;
+}
+.nave-links ul{
+    display:flex;
+    flex-direction: row;
+}
+
+.nave-links ul li{
+   padding: 0 4px;
+   list-style: none;
+}
+
+.nave-links ul li img{
+    transform: scale(0.6);
+}
+
+section{
+    height: 100vh;
+    overflow: hidden;
+}
+/*secion的height:100vh ; bg img的height:110vh width: 110vw，注意*/ 
+.bg img{
+    height: 110vh;
+    width: 110vw;
+    filter: brightness(0.6);
+}
+/*brightness: 0.6 變暗*/
+.rock1 img{
+    width:40%;
+    filter: brightness(0.5);
+}
+
+.text h1{
+    font-size: 5vw;
+    color:white;
+    letter-spacing: 20px;
+    position:absolute;
+    top:35vh;
+    left:34vw;
+    font-family: 'AlphaCentauri', sans-serif;
+}
+.earth img{
+    width:400px;
+    height: 400px;
+    position: absolute;
+    left: 34vw;
+    top: 25vh;
+    z-index: 1;
+    filter: brightness(0.7);
+}
+/*當一個物件沒有被設定寬高時，它的寬高就是 auto，也就表示物件的寬高可以被拉伸*/
+.mid{
+    left: -150px !important;
+    bottom: -100px !important;
+    top: unset !important;
+}
+/*why top: unset ? I cannot understand*/
+/*why you don't have to set the position but top/left/right/bottom works*/
+.mid img{
+    width:100%;
+    z-index: 2;
+    left: -20px;
+    top: 20vh !important;
+    filter: brightness(1);
+}
+
+.fore{
+    right: -50px !important;
+    bottom: -200px !important;
+    top: 0px !important;
+    left: unset !important;
+}
+/*why left: unset ? I cannot understand*/
+.fore img{
+    width: 400px;
+    height: 110vh;
+    filter: brightness(0.5);
+    z-index: 3;
+}
